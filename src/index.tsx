@@ -1,12 +1,18 @@
-import React from "react";
-import { render } from "react-dom";
-import styles from "./css/typo.scss";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { HashRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store/createStore';
+
+import styles from './css/typo.scss';
+console.log('styles:', styles);
 
 const App = () => (
-  <div>
-    <h1>Webpack 2020</h1>
-    <div className="logo"></div>
-  </div>
+  <Provider store={store}>
+    <HashRouter>
+      <h1>TITLE</h1>
+    </HashRouter>
+  </Provider>
 );
 
-render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('root'));
