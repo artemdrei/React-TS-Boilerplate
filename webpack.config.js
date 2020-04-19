@@ -74,12 +74,21 @@ const getPlugins = () => {
 const config = {
   context: path.resolve(__dirname, 'src'),
   mode,
-  entry: { main: ['./index.tsx'] },
+  entry: { main: ['@babel/polyfill', './index.tsx'] },
   output: {
     filename: getFileName('js'),
     path: path.resolve(__dirname, 'dist'),
   },
-  resolve: { extensions: ['.ts', '.tsx', '.js'] },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+    alias: {
+      '@root': path.resolve(__dirname, './src'),
+      '@api': path.resolve(__dirname, './src/api'),
+      '@store': path.resolve(__dirname, './src/store'),
+      '@types': path.resolve(__dirname, './src/types'),
+      '@containers': path.resolve(__dirname, '.src/containers'),
+    },
+  },
   plugins: getPlugins(),
 
   optimization: getOptimizationConfig(),

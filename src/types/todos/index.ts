@@ -1,6 +1,8 @@
 export interface ITodo {
+  userId: number;
+  id: number;
   title: string;
-  isChecked: boolean;
+  completed: boolean;
 }
 
 export interface ITodos {

@@ -1,7 +1,7 @@
 import { Reducer } from 'redux';
-import { ITodos } from '@root/types';
+import { ITodos } from '@root/types/';
 import { IFetchTodos } from '@store/actions';
-import { todos } from '../../defaultState';
+import { todos } from '@store/defaultState';
 
 const reducer: Reducer<ITodos, IFetchTodos> = (state = todos, { type, payload }) => {
   switch (type) {

@@ -3,16 +3,13 @@ import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store/createStore';
+import App from './containers/Pages/App';
 
-import styles from './css/typo.scss';
-console.log('styles:', styles);
-
-const App = () => (
+ReactDOM.render(
   <Provider store={store}>
     <HashRouter>
-      <h1>TITLE</h1>
+      <App />
     </HashRouter>
-  </Provider>
+  </Provider>,
+  document.getElementById('root')
 );
-
-ReactDOM.render(<App />, document.getElementById('root'));

@@ -8,10 +8,13 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@root/*": ["src/*"],
-      "@store/*": ["src/store/*"]
+      "@api/*": ["src/api/*"],
+      "@store/*": ["src/store/*"],
+      "@types/*": ["src/types/*"],
+      "@containers/*": ["src/containers/*"]
     }
   }
 }

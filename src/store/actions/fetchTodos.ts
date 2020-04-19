@@ -1,17 +1,16 @@
 import { IAction, IDispatch, ITodo } from '@root/types';
+import { fetchTodosRequest } from '@api/requests';
 
 type TFetchTodos = () => (dispatch: IDispatch) => void;
 export interface IFetchTodos extends IAction<'FETCH_TODOS'> {
   payload: ITodo[];
 }
 
-export const fetchFolders: TFetchTodos = () => async (dispatch) => {
-  console.log('SHOW LOADER');
+export const fetchTodos: TFetchTodos = () => async (dispatch) => {
+  console.log('__SHOW LOADER__');
   try {
-    const todos = [
-      { title: 'One', isChecked: true },
-      { title: 'Two', isChecked: false },
-    ];
+    const todos = await fetchTodosRequest();
+    console.log('todos:', todos);
 
     const action: IFetchTodos = {
       type: 'FETCH_TODOS',
@@ -20,8 +19,8 @@ export const fetchFolders: TFetchTodos = () => async (dispatch) => {
 
     dispatch(action);
   } catch (e) {
-    console.log('fetchFolders redux action error', e);
+    console.log('fetchTodos redux action error', e);
   } finally {
-    console.log('HIDE LOADER');
+    console.log('__HIDE LOADER__');
   }
 };
