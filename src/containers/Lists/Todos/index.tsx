@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { IState } from '@root/types';
+import { IState } from '@root/typings';
 
 import { fetchTodos } from '@store/actions/fetchTodos';
 

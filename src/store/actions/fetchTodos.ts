@@ -1,4 +1,4 @@
-import { IAction, IDispatch, ITodo } from '@root/types';
+import { IAction, IDispatch, ITodo } from '@root/typings';
 import { fetchTodosRequest } from '@api/requests';
 
 type TFetchTodos = () => (dispatch: IDispatch) => void;

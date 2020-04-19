@@ -13,7 +13,7 @@
       "@root/*": ["src/*"],
       "@api/*": ["src/api/*"],
       "@store/*": ["src/store/*"],
-      "@types/*": ["src/types/*"],
+      "@types/*": ["src/typings/*"],
       "@containers/*": ["src/containers/*"]
     }
   }

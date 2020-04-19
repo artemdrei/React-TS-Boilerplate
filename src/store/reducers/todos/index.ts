@@ -1,5 +1,5 @@
 import { Reducer } from 'redux';
-import { ITodos } from '@root/types/';
+import { ITodos } from '@root/typings';
 import { IFetchTodos } from '@store/actions';
 import { todos } from '@store/defaultState';
 

@@ -1,5 +1,5 @@
 import request from '@api/requests/setup';
-import { ITodo } from '@root/types';
+import { ITodo } from '@root/typings';
 
 export const fetchTodosRequest = async (): Promise<ITodo[]> => {
   try {
