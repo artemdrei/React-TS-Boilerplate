@@ -36,7 +36,15 @@ const getStyleLoader = (extra) => {
         reloadAll: true,
       },
     },
-    'css-loader', // Translates CSS into CommonJS
+    {
+      loader: 'css-loader',
+      options: {
+        modules: {
+          localIdentName: '[local]__[hash:base64:5]',
+        },
+        sourceMap: isDev,
+      },
+    },
   ];
 
   if (extra) config.push(extra);
