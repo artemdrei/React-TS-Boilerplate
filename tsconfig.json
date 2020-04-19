@@ -14,7 +14,8 @@
       "@api/*": ["src/api/*"],
       "@store/*": ["src/store/*"],
       "@types/*": ["src/typings/*"],
-      "@containers/*": ["src/containers/*"]
+      "@containers/*": ["src/containers/*"],
+      "@components/*": ["src/components/*"]
     }
   }
 }
