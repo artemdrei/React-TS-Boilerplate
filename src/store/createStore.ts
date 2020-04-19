@@ -1,14 +1,15 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk';
 
-import { reducers } from './reducers';
 import { IState, IAction, TStoreEnhancer } from '@root/typings';
-import { todos } from './defaultState';
+import { reducers } from './reducers';
+import { todos, photos } from './defaultState';
 
 const composeEnhancers: <R>(a: R) => R = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const initialState: IState = {
   todos,
+  photos,
 };
 
 const store = createStore<IState, IAction, {}, TStoreEnhancer>(
