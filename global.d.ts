@@ -168,3 +168,4 @@ declare var Window: {
   prototype: Window;
   new (): Window;
 };
+declare module '*.svg';

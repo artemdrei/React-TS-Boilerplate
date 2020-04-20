@@ -4,6 +4,8 @@ import { IState } from '@root/typings';
 
 import { fetchPhotos } from '@store/actions/fetchPhotos';
 
+import s from './styles.scss';
+
 const ListOfPhotos = () => {
   const dispatch = useDispatch();
   const photos = useSelector((state: IState) => state.photos.items);
@@ -13,12 +15,15 @@ const ListOfPhotos = () => {
   }, []);
 
   return (
-    <ul>
+    <ul className={s.photos}>
       {photos.map(({ id, title, thumbnailUrl }) => {
         return (
-          <li key={id}>
-            <h2>{`Title: ${title}`}</h2>
-            <img src={thumbnailUrl} alt="thumbnail" />
+          <li key={id} className={s.photo}>
+            <img src={thumbnailUrl} alt="thumbnail" className={s.cover} />
+            <h3 className={s.title}>
+              <span>Title: </span>
+              {title}
+            </h3>
           </li>
         );
       })}

@@ -9,10 +9,10 @@ const Navigation = () => {
     <div className={s.nav}>
       {/* <BoilerIcon /> */}
       <Link to={'/todos'} className={s.navItem}>
-        Go to Todos
+        Todos
       </Link>
       <Link to={'/photos'} className={s.navItem}>
-        Go to Photos
+        Photos
       </Link>
     </div>
   );

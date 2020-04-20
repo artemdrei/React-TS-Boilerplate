@@ -20,8 +20,14 @@ const ListOfTodos = () => {
         console.log('completed:', completed);
         return (
           <li key={id} className={s.todo}>
-            <h2>{`Title: ${title}`}</h2>
-            <div>{`Completed: ${completed}`}</div>
+            <h3 className={s.title}>
+              <span>Title: </span>
+              {title}
+            </h3>
+            <div className={s.status}>
+              <span>Completed: </span>
+              {completed ? 'Yes' : 'No'}
+            </div>
           </li>
         );
       })}

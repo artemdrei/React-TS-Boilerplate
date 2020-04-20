@@ -1,9 +1,12 @@
+@import '../../assets/styles/colors.scss';
+
 .nav {
   margin-bottom: 20px;
   padding: 12px 20px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid $commonGray-A200;
 }
 
 .navItem {
   margin: 4px 12px;
+  color: $commonBlue-800;
 }
