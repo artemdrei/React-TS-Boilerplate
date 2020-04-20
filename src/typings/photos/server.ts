@@ -1,11 +1,7 @@
-export interface IPhoto {
+export interface IServerPhoto {
   albumId: number;
   id: number;
   title: string;
   url: string;
   thumbnailUrl: string;
-}
-
-export interface IPhotos {
-  items: IPhoto[];
 }

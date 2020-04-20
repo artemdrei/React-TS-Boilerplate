@@ -1,7 +1,7 @@
 import request from '@api/requests/setup';
-import { IPhoto } from '@root/typings';
+import { IServerPhoto } from '@root/typings';
 
-export const fetchPhotosRequest = async (): Promise<IPhoto[]> => {
+export const fetchPhotosRequest = async (): Promise<IServerPhoto[]> => {
   try {
     const photos = await request.get('/albums/1/photos');
     if (photos.data) {

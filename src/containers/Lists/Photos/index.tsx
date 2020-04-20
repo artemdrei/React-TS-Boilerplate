@@ -16,10 +16,10 @@ const ListOfPhotos = () => {
 
   return (
     <ul className={s.photos}>
-      {photos.map(({ id, title, thumbnailUrl }) => {
+      {photos.map(({ id, title, url }) => {
         return (
           <li key={id} className={s.photo}>
-            <img src={thumbnailUrl} alt="thumbnail" className={s.cover} />
+            <img src={url} alt="thumbnail" className={s.cover} />
             <h3 className={s.title}>
               <span>Title: </span>
               {title}
