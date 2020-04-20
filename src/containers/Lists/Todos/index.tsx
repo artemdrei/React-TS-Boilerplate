@@ -4,6 +4,8 @@ import { IState } from '@root/typings';
 
 import { fetchTodos } from '@store/actions/fetchTodos';
 
+import s from './styles.scss';
+
 const ListOfTodos = () => {
   const dispatch = useDispatch();
   const todos = useSelector((state: IState) => state.todos.items);
@@ -13,11 +15,11 @@ const ListOfTodos = () => {
   }, []);
 
   return (
-    <ul>
+    <ul className={s.todos}>
       {todos.map(({ id, title, completed }) => {
         console.log('completed:', completed);
         return (
-          <li key={id}>
+          <li key={id} className={s.todo}>
             <h2>{`Title: ${title}`}</h2>
             <div>{`Completed: ${completed}`}</div>
           </li>
