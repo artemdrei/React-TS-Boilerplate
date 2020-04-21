@@ -17,8 +17,8 @@ const App = () => {
         <Navigation />
         <Switch>
           <PrivateRoute path="/todos" condition={isLoggedIn} component={Todos} redirect="/" />
-          <PrivateRoute path="/photos" condition={isLoggedIn} component={Photos} redirect="/photos" />
-          <Redirect to="/" />
+          <PrivateRoute path="/photos" condition={isLoggedIn} component={Photos} redirect="/" />
+          <Redirect to="/todos" />
         </Switch>
       </div>
     </div>
