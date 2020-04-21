@@ -17,7 +17,6 @@ const ListOfTodos = () => {
   return (
     <ul className={s.todos}>
       {todos.map(({ id, title, completed }) => {
-        console.log('completed:', completed);
         return (
           <li key={id} className={s.todo}>
             <h3 className={s.title}>

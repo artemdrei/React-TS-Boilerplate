@@ -10,7 +10,6 @@ export const fetchTodos: TFetchTodos = () => async (dispatch) => {
   console.log('__SHOW LOADER__');
   try {
     const todos = await fetchTodosRequest();
-    console.log('todos:', todos);
 
     const action: IFetchTodos = {
       type: 'FETCH_TODOS',

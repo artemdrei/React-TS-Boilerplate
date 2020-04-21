@@ -11,9 +11,7 @@ export const fetchPhotos: TFetchPhotos = () => async (dispatch) => {
   console.log('__SHOW LOADER__');
   try {
     const photos = await fetchPhotosRequest();
-    console.log('photos:', photos);
     const mappedPhots = mapPhotos(photos);
-    console.log('mappedPhots:', mappedPhots);
 
     const action: IFetchPhotos = {
       type: 'FETCH_PHOTOS',
