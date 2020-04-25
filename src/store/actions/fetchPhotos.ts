@@ -1,5 +1,5 @@
 import { IAction, IDispatch, IPhoto } from '@root/typings';
-import { fetchPhotosRequest } from '@api/requests';
+import api from '@api/requests';
 import { mapPhotos } from '@api/mappers';
 
 type TFetchPhotos = () => (dispatch: IDispatch) => void;
@@ -10,7 +10,7 @@ export interface IFetchPhotos extends IAction<'FETCH_PHOTOS'> {
 export const fetchPhotos: TFetchPhotos = () => async (dispatch) => {
   console.log('__SHOW LOADER__');
   try {
-    const photos = await fetchPhotosRequest();
+    const photos = await api.fetchPhotos();
     const mappedPhots = mapPhotos(photos);
 
     const action: IFetchPhotos = {
