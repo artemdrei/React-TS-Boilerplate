@@ -114,7 +114,7 @@ const config = {
         use: getStyleLoader('sass-loader'),
       },
       {
-        test: /\.(jpg|jpeg|svg|png|gif)$/,
+        test: /\.(jpg|jpeg|png|gif)$/,
         use: ['file-loader'],
       },
       {
@@ -127,6 +127,17 @@ const config = {
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-react-loader',
+            options: {
+              jsx: true,
+            },
+          },
+        ],
       },
     ],
   },
