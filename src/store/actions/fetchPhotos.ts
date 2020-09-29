@@ -8,7 +8,6 @@ export interface IFetchPhotos extends IAction<'FETCH_PHOTOS'> {
 }
 
 export const fetchPhotos: TFetchPhotos = () => async (dispatch) => {
-  console.log('__SHOW LOADER__');
   try {
     const photos = await api.fetchPhotos();
     const mappedPhots = mapPhotos(photos);
@@ -19,9 +18,7 @@ export const fetchPhotos: TFetchPhotos = () => async (dispatch) => {
     };
 
     dispatch(action);
-  } catch (e) {
-    console.log('fetchPhotos redux action error', e);
-  } finally {
-    console.log('__HIDE LOADER__');
+  } catch (error) {
+    throw new Error(error);
   }
 };

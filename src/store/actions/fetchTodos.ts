@@ -7,7 +7,6 @@ export interface IFetchTodos extends IAction<'FETCH_TODOS'> {
 }
 
 export const fetchTodos: TFetchTodos = () => async (dispatch) => {
-  console.log('__SHOW LOADER__');
   try {
     const todos = await api.fetchTodos();
 
@@ -17,9 +16,7 @@ export const fetchTodos: TFetchTodos = () => async (dispatch) => {
     };
 
     dispatch(action);
-  } catch (e) {
-    console.log('fetchTodos redux action error', e);
-  } finally {
-    console.log('__HIDE LOADER__');
+  } catch (error) {
+    throw new Error(error);
   }
 };
