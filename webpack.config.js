@@ -61,12 +61,14 @@ const getPlugins = () => {
         collapseWhitespace: isProd,
       },
     }),
-    new CopyPlugin([
-      {
-        from: path.resolve(__dirname, 'src/assets/favicon/favicon.ico'),
-        to: path.resolve(__dirname, 'dist'),
-      },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/assets/favicon/favicon.ico'),
+          to: path.resolve(__dirname, 'dist'),
+        },
+      ],
+    }),
     new MiniCssExtractPlugin({
       filename: getFileName('css'),
     }),
