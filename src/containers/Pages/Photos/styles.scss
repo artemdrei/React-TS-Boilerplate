@@ -4,3 +4,13 @@
   padding: 0 20px;
   color: $commonGray-900;
 }
+
+.photo {
+  display: block;
+  margin: 0 auto 40px;
+  width: 400px;
+  height: 160px;
+  background: url('@root/assets/images/photo.jpg') center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
