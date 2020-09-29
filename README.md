@@ -4,7 +4,8 @@
 
 - Add more tests
 - Add tests folder
-- Add ES Linter
+- Config ES Linter
+- Add Travis to deploy Level-1 on gh-pages
 
 Ideas:
 
