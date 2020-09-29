@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ListOfTodos from '@root/containers/Lists/Todos';
+import ListOfTodos from '@root/containers/Pages/Common/Lists/Todos';
 
 import s from './styles.scss';
 
