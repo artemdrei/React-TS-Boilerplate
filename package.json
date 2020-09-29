@@ -6,7 +6,9 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --watch",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json"
+    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json",
+    "svg:optimize": "find ./src/assets/icons -type f -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo",
+    "ts:watch": "tsc --skipLibCheck --allowJs --watch"
   },
   "browserslist": "> 1%, not dead",
   "repository": {
@@ -45,6 +47,8 @@
     "redux-thunk": "^2.3.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
+    "svg-react-loader": "^0.4.6",
+    "svgo": "^1.3.2",
     "terser-webpack-plugin": "^2.3.5",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
