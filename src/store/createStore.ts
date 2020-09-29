@@ -12,7 +12,7 @@ const initialState: IState = {
   photos,
 };
 
-const store = createStore<IState, IAction, {}, TStoreEnhancer>(
+const store = createStore<IState, IAction, Record<string, unknown>, TStoreEnhancer>(
   reducers,
   initialState,
   composeEnhancers(applyMiddleware(reduxThunk))
