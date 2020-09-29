@@ -6,11 +6,12 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --watch",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json",
-    "svg:optimize": "find ./src/assets/icons -type f -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo",
+    "lint": "eslint . --ext .ts",
     "ts:watch": "tsc --skipLibCheck --allowJs --watch",
     "test": "jest",
-    "test:watch": "jest --watch --verbose false"
+    "test:watch": "jest --watch --verbose false",
+    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json",
+    "svg:optimize": "find ./src/assets/icons -type f -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo"
   },
   "jest": {
     "setupFilesAfterEnv": [
@@ -58,6 +59,8 @@
     "@types/react-router-dom": "^5.1.5",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -66,6 +69,8 @@
     "css-loader": "^4.3.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
+    "eslint": "^7.10.0",
+    "eslint-plugin-no-loops": "^0.3.0",
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.5.0",
     "install": "^0.13.0",
