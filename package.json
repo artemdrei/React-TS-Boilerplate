@@ -8,7 +8,28 @@
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json",
     "svg:optimize": "find ./src/assets/icons -type f -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo",
-    "ts:watch": "tsc --skipLibCheck --allowJs --watch"
+    "ts:watch": "tsc --skipLibCheck --allowJs --watch",
+    "test": "jest",
+    "test:watch": "jest --watch --verbose false"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "setupFiles": [
+      "<rootDir>/node_modules/regenerator-runtime/runtime"
+    ],
+    "moduleNameMapper": {
+      "\\.(svg)$": "<rootDir>/node_modules/svg-react-loader",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "<rootDir>/__mocks__/styleMock.js",
+      "^@root/(.*)": "<rootDir>/src/$1",
+      "^@api/(.*)": "<rootDir>/src/api/$1",
+      "^@store/(.*)": "<rootDir>/src/store/$1"
+    }
   },
   "browserslist": "> 1%, not dead",
   "repository": {
@@ -27,22 +48,32 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
+    "@types/enzyme": "^3.10.7",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/history": "^4.7.8",
+    "@types/jest": "^26.0.14",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.9",
     "@types/react-router-dom": "^5.1.5",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
+    "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.1.1",
     "cross-env": "^7.0.2",
     "css-loader": "^4.3.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.5.0",
+    "install": "^0.13.0",
+    "jest": "^26.4.2",
+    "jest-enzyme": "^7.1.2",
     "mini-css-extract-plugin": "^0.11.2",
     "node-sass": "^4.14.1",
+    "npm": "^6.14.8",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^10.0.2",
@@ -57,7 +88,9 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "-": "0.0.1",
     "@babel/polyfill": "^7.11.5",
+    "D": "^1.0.0",
     "axios": "^0.20.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",

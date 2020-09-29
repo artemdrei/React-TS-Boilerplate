@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sample test Should match the snapshot 1`] = `
+<div>
+  <svgReactLoader />
+  <Link
+    to="/todos"
+  >
+    Todos
+  </Link>
+  <Link
+    to="/photos"
+  >
+    Photos
+  </Link>
+</div>
+`;
