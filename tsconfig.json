@@ -12,7 +12,8 @@
     "paths": {
       "@root/*": ["src/*"],
       "@api/*": ["src/api/*"],
-      "@store/*": ["src/store/*"]
+      "@store/*": ["src/store/*"],
+      "@colors/*": ["src/assets/styles/colors.scss"]
     }
   }
 }

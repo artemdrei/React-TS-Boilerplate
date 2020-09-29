@@ -1,5 +1,5 @@
 import { IAction, IDispatch, ITodo } from '@root/typings';
-import { fetchTodosRequest } from '@api/requests';
+import api from '@api/requests';
 
 type TFetchTodos = () => (dispatch: IDispatch) => void;
 export interface IFetchTodos extends IAction<'FETCH_TODOS'> {
@@ -7,9 +7,8 @@ export interface IFetchTodos extends IAction<'FETCH_TODOS'> {
 }
 
 export const fetchTodos: TFetchTodos = () => async (dispatch) => {
-  console.log('__SHOW LOADER__');
   try {
-    const todos = await fetchTodosRequest();
+    const todos = await api.fetchTodos();
 
     const action: IFetchTodos = {
       type: 'FETCH_TODOS',
@@ -17,9 +16,7 @@ export const fetchTodos: TFetchTodos = () => async (dispatch) => {
     };
 
     dispatch(action);
-  } catch (e) {
-    console.log('fetchTodos redux action error', e);
-  } finally {
-    console.log('__HIDE LOADER__');
+  } catch (error) {
+    throw new Error(error);
   }
 };

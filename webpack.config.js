@@ -61,20 +61,22 @@ const getPlugins = () => {
         collapseWhitespace: isProd,
       },
     }),
-    new CopyPlugin([
-      {
-        from: path.resolve(__dirname, 'src/assets/favicon/favicon.ico'),
-        to: path.resolve(__dirname, 'dist'),
-      },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/assets/favicon/favicon.ico'),
+          to: path.resolve(__dirname, 'dist'),
+        },
+      ],
+    }),
     new MiniCssExtractPlugin({
       filename: getFileName('css'),
     }),
   ];
 
-  if (isProd) {
-    plugins.push(new BundleAnalyzerPlugin());
-  }
+  // if (isProd) {
+  //   plugins.push(new BundleAnalyzerPlugin());
+  // }
 
   return plugins;
 };
@@ -84,6 +86,7 @@ const config = {
   mode,
   entry: { main: ['@babel/polyfill', './index.tsx'] },
   output: {
+    publicPath: '/',
     filename: getFileName('js'),
     path: path.resolve(__dirname, 'dist'),
   },
@@ -93,6 +96,7 @@ const config = {
       '@root': path.resolve(__dirname, './src'),
       '@api': path.resolve(__dirname, './src/api'),
       '@store': path.resolve(__dirname, './src/store'),
+      '@colors': path.resolve(__dirname, './src/assets/styles/colors.scss'),
     },
   },
   plugins: getPlugins(),
@@ -101,10 +105,18 @@ const config = {
   devServer: {
     port: 4200,
     hot: isDev,
+    historyApiFallback: true,
   },
   devtool: isDev ? 'source-map' : '',
   module: {
     rules: [
+      {
+        test: /\.(ts|js)x?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
       {
         test: /\.css$/,
         use: getStyleLoader(),
@@ -114,19 +126,23 @@ const config = {
         use: getStyleLoader('sass-loader'),
       },
       {
-        test: /\.(jpg|jpeg|svg|png|gif)$/,
+        test: /\.(jpg|jpeg|png|gif)$/,
         use: ['file-loader'],
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-react-loader',
+            options: {
+              jsx: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(ttf|woff|woff2|oet)$/,
         use: ['file-loader'],
-      },
-      {
-        test: /\.(ts|js)x?$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
       },
     ],
   },

@@ -4,6 +4,7 @@ import { IState } from '@root/typings';
 
 import { fetchPhotos } from '@store/actions/fetchPhotos';
 
+import labels from '@root/i18n';
 import s from './styles.scss';
 
 const ListOfPhotos = () => {
@@ -21,7 +22,7 @@ const ListOfPhotos = () => {
           <li key={id} className={s.photo}>
             <img src={url} alt="thumbnail" className={s.cover} />
             <h3 className={s.title}>
-              <span>Title: </span>
+              <span>{labels.pages.photos.list.title} </span>
               {title}
             </h3>
           </li>
