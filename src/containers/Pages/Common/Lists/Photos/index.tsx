@@ -7,7 +7,7 @@ import { fetchPhotos } from '@store/actions/fetchPhotos';
 import labels from '@root/i18n';
 import s from './styles.scss';
 
-const ListOfPhotos = () => {
+const ListOfPhotos: React.FC = () => {
   const dispatch = useDispatch();
   const photos = useSelector((state: IState) => state.photos.items);
 
