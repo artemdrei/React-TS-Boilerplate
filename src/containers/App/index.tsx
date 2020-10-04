@@ -2,7 +2,7 @@ import React from 'react';
 
 import s from './styles.scss';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className={s.app}>
       <div className={s.container}>
