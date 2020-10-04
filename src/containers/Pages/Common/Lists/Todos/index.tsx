@@ -6,7 +6,7 @@ import { fetchTodos } from '@store/actions/fetchTodos';
 
 import s from './styles.scss';
 
-const ListOfTodos = () => {
+const ListOfTodos: React.FC = () => {
   const dispatch = useDispatch();
   const todos = useSelector((state: IState) => state.todos.items);
 

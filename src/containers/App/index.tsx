@@ -7,7 +7,7 @@ import Photos from '@root/containers/Pages/Photos';
 
 import s from './styles.scss';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className={s.app}>
       <Navigation />

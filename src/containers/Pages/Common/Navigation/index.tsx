@@ -5,7 +5,7 @@ import labels from '@root/i18n';
 import s from './styles.scss';
 import BoilerIcon from '@root/assets/svg/boiler.svg';
 
-const Navigation = () => {
+const Navigation: React.FC = () => {
   return (
     <div className={s.nav}>
       <BoilerIcon className={s.boilerIcon} />
