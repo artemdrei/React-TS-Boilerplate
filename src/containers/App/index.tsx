@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Redirect, Route } from 'react-router-dom';
 
-import Navigation from '@root/containers/Pages/Common/Navigation';
+import Navigation from '@root/components';
 import Todos from '@root/containers/Pages/Todos';
 import Photos from '@root/containers/Pages/Photos';
 

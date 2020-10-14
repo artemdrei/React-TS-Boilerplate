@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ListOfPhotos from '@root/containers/Pages/Common/Lists/Photos';
+import ListOfPhotos from '@root/containers/Pages/Todos/List';
 
 import s from './styles.scss';
 import labels from '@root/i18n';
