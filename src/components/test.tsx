@@ -1,13 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
+import { testRender, makeTestStore } from '@root/tests/utils';
 
-import Wrapper from '.';
+import Cmp from '.';
 
+const store = makeTestStore();
 describe('Sample test', () => {
-  const wrapper = shallow(<Wrapper />);
-
   it('Should match the snapshot', () => {
-    expect(toJson(wrapper)).toMatchSnapshot();
+    const { container } = testRender(<Cmp />, store);
+    expect(container).toMatchSnapshot();
   });
 });

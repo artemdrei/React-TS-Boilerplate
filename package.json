@@ -24,7 +24,7 @@
       "<rootDir>/node_modules/regenerator-runtime/runtime"
     ],
     "moduleNameMapper": {
-      "\\.(svg)$": "<rootDir>/node_modules/svg-react-loader",
+      "\\.(svg)$": "<rootDir>/__mocks__/svgMock.js",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|scss|sass)$": "<rootDir>/__mocks__/styleMock.js",
       "^@root/(.*)": "<rootDir>/src/$1",
@@ -49,7 +49,9 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
+    "@testing-library/dom": "^7.26.0",
     "@testing-library/react": "^11.0.4",
+    "@testing-library/user-event": "^12.1.7",
     "@types/enzyme": "^3.10.7",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/history": "^4.7.8",
