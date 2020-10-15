@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List of photos Should match snapshot 1`] = `
+<div>
+  <ul>
+    <li>
+      <h3>
+        <span>
+          Title: 
+        </span>
+        delectus aut autem
+      </h3>
+      <div>
+        <span>
+          Completed: 
+        </span>
+        No
+      </div>
+    </li>
+    <li>
+      <h3>
+        <span>
+          Title: 
+        </span>
+        quis ut nam facilis et officia qui
+      </h3>
+      <div>
+        <span>
+          Completed: 
+        </span>
+        No
+      </div>
+    </li>
+    <li>
+      <h3>
+        <span>
+          Title: 
+        </span>
+        fugiat veniam minus
+      </h3>
+      <div>
+        <span>
+          Completed: 
+        </span>
+        No
+      </div>
+    </li>
+    <li>
+      <h3>
+        <span>
+          Title: 
+        </span>
+        et porro tempora
+      </h3>
+      <div>
+        <span>
+          Completed: 
+        </span>
+        Yes
+      </div>
+    </li>
+    <li>
+      <h3>
+        <span>
+          Title: 
+        </span>
+        laboriosam mollitia et enim quasi adipisci quia provident illum
+      </h3>
+      <div>
+        <span>
+          Completed: 
+        </span>
+        No
+      </div>
+    </li>
+    <li>
+      <h3>
+        <span>
+          Title: 
+        </span>
+        qui ullam ratione quibusdam voluptatem quia omnis
+      </h3>
+      <div>
+        <span>
+          Completed: 
+        </span>
+        No
+      </div>
+    </li>
+    <li>
+      <h3>
+        <span>
+          Title: 
+        </span>
+        illo expedita consequatur quia in
+      </h3>
+      <div>
+        <span>
+          Completed: 
+        </span>
+        No
+      </div>
+    </li>
+    <li>
+      <h3>
+        <span>
+          Title: 
+        </span>
+        quo adipisci enim quam ut ab
+      </h3>
+      <div>
+        <span>
+          Completed: 
+        </span>
+        Yes
+      </div>
+    </li>
+    <li>
+      <h3>
+        <span>
+          Title: 
+        </span>
+        molestiae perspiciatis ipsa
+      </h3>
+      <div>
+        <span>
+          Completed: 
+        </span>
+        No
+      </div>
+    </li>
+    <li>
+      <h3>
+        <span>
+          Title: 
+        </span>
+        illo est ratione doloremque quia maiores aut
+      </h3>
+      <div>
+        <span>
+          Completed: 
+        </span>
+        Yes
+      </div>
+    </li>
+  </ul>
+</div>
+`;

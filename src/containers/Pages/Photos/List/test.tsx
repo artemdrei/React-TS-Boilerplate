@@ -1,10 +1,9 @@
 import React from 'react';
-import { screen } from '@testing-library/react';
 import { testRender, makeTestStore } from '@root/tests/utils';
 
 import Cmp from './';
 
-describe('Photos Page', () => {
+describe('List of photos', () => {
   beforeEach(() => {
     const store = makeTestStore();
     testRender(<Cmp />, store);
@@ -15,9 +14,5 @@ describe('Photos Page', () => {
     const { container } = testRender(<Cmp />, store);
 
     expect(container).toMatchSnapshot();
-  });
-
-  it('Should has correct title', () => {
-    expect(screen.getByText('List of Photos')).toBeTruthy();
   });
 });

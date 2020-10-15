@@ -1,5 +1,146 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Photos Page Should match snapshot 1`] = `
+<div>
+  <h1>
+    List of Photos
+  </h1>
+  <div />
+  <ul>
+    <li>
+      <img
+        alt="thumbnail"
+        src="https://via.placeholder.com/600/92c952"
+      />
+      <h3>
+        <span>
+          Title
+           
+        </span>
+        accusamus beatae ad facilis cum similique qui sunt
+      </h3>
+    </li>
+    <li>
+      <img
+        alt="thumbnail"
+        src="https://via.placeholder.com/600/771796"
+      />
+      <h3>
+        <span>
+          Title
+           
+        </span>
+        reprehenderit est deserunt velit ipsam
+      </h3>
+    </li>
+    <li>
+      <img
+        alt="thumbnail"
+        src="https://via.placeholder.com/600/24f355"
+      />
+      <h3>
+        <span>
+          Title
+           
+        </span>
+        officia porro iure quia iusto qui ipsa ut modi
+      </h3>
+    </li>
+    <li>
+      <img
+        alt="thumbnail"
+        src="https://via.placeholder.com/600/d32776"
+      />
+      <h3>
+        <span>
+          Title
+           
+        </span>
+        culpa odio esse rerum omnis laboriosam voluptate repudiandae
+      </h3>
+    </li>
+    <li>
+      <img
+        alt="thumbnail"
+        src="https://via.placeholder.com/600/f66b97"
+      />
+      <h3>
+        <span>
+          Title
+           
+        </span>
+        natus nisi omnis corporis facere molestiae rerum in
+      </h3>
+    </li>
+    <li>
+      <img
+        alt="thumbnail"
+        src="https://via.placeholder.com/600/56a8c2"
+      />
+      <h3>
+        <span>
+          Title
+           
+        </span>
+        accusamus ea aliquid et amet sequi nemo
+      </h3>
+    </li>
+    <li>
+      <img
+        alt="thumbnail"
+        src="https://via.placeholder.com/600/b0f7cc"
+      />
+      <h3>
+        <span>
+          Title
+           
+        </span>
+        officia delectus consequatur vero aut veniam explicabo molestias
+      </h3>
+    </li>
+    <li>
+      <img
+        alt="thumbnail"
+        src="https://via.placeholder.com/600/54176f"
+      />
+      <h3>
+        <span>
+          Title
+           
+        </span>
+        aut porro officiis laborum odit ea laudantium corporis
+      </h3>
+    </li>
+    <li>
+      <img
+        alt="thumbnail"
+        src="https://via.placeholder.com/600/51aa97"
+      />
+      <h3>
+        <span>
+          Title
+           
+        </span>
+        qui eius qui autem sed
+      </h3>
+    </li>
+    <li>
+      <img
+        alt="thumbnail"
+        src="https://via.placeholder.com/600/810b14"
+      />
+      <h3>
+        <span>
+          Title
+           
+        </span>
+        beatae et provident et ut vel
+      </h3>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`Todos Page Should match snapshot 1`] = `
 <div>
   <h1>
