@@ -32,10 +32,6 @@ const getStyleLoader = (extra) => {
   const config = [
     {
       loader: MiniCssExtractPlugin.loader,
-      options: {
-        hmr: isDev, // hot module replacement in dev mode
-        reloadAll: true,
-      },
     },
     {
       loader: 'css-loader',
